@@ -27,7 +27,6 @@ public class Main {
             HttpClient client = HttpClientBuilder.create().build();
             HttpResponse response = client.execute(new HttpGet(url));
             int status = response.getStatusLine().getStatusCode();
-            System.out.println(status);
             if(status >= 200 && status < 400){
                 Document documento = Jsoup.connect(url).get();
 
